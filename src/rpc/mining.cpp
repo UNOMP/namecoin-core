@@ -310,10 +310,9 @@ static UniValue BIP22ValidationResult(const CValidationState& state)
     return "valid?";
 }
 
-#if 0
-getblocktemplate is disabled for merge-mining, since getauxblock should
-be used instead.  All blocks are required to be merge-mined, thus GBT
-makes no sense.
+//getblocktemplate is disabled for merge-mining, since getauxblock should
+//be used instead.  All blocks are required to be merge-mined, thus GBT
+//makes no sense.
 
 std::string gbt_vb_name(const Consensus::DeploymentPos pos) {
     const struct BIP9DeploymentInfo& vbinfo = VersionBitsDeploymentInfo[pos];

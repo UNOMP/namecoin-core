@@ -677,7 +677,6 @@ UniValue getblocktemplate(const UniValue& params, bool fHelp)
 
     return result;
 }
-#endif // Disabled getblocktemplate
 
 class submitblock_StateCatcher : public CValidationInterface
 {
@@ -1068,6 +1067,7 @@ static const CRPCCommand commands[] =
     { "mining",             "getmininginfo",          &getmininginfo,          true  },
     { "mining",             "prioritisetransaction",  &prioritisetransaction,  true  },
     { "mining",             "submitblock",            &submitblock,            true  },
+    { "mining",             "getblocktemplate",       &getblocktemplate,       true  },
     { "mining",             "getauxblock",            &getauxblock,            true  },
 
     { "generating",         "generate",               &generate,               true  },
